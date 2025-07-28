@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INCH – Features (New)</title>
+  <!-- Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0E0E0E;
+      color: #FFFFFF;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    .logo span {
+      color: #B6FF00;
+      margin-right: 8px;
+      font-size: 32px;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #B6FF00;
+    }
+    .cta-button {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #9BDB00;
+    }
+    .hero {
+      text-align: center;
+      margin: 40px 0 60px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 0 0 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #A0A0A0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+    .feature-card {
+      background: #171717;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(182, 255, 0, 0.15);
+    }
+    .feature-icon {
+      font-size: 40px;
+      color: #B6FF00;
+      margin-bottom: 12px;
+    }
+    .feature-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 16px;
+      color: #A0A0A0;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid #2A2A2A;
+      text-align: center;
+      color: #6B6B6B;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span>|</span>INCH</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="features-new.html" class="active">Features</a>
+        <a href="pricing-new.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="strategy.html">Strategy</a>
+      </nav>
+      <a href="index.html" class="cta-button">Get Started</a>
+    </header>
+
+    <div class="hero">
+      <h1>Next‑Gen Features</h1>
+      <p>Explore the innovations that make INCH the most advanced biometric coaching platform on the planet.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Unified Dashboard Feature -->
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <div class="feature-title">Unified Dashboard</div>
+        <div class="feature-desc">Aggregate sleep, stress, nutrition and calendar data from all your favourite wearables and apps into one elegant dashboard.</div>
+      </div>
+      <!-- AI‑Powered Insights Feature -->
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title">AI‑Powered Insights</div>
+        <div class="feature-desc">Turn raw numbers into actionable recommendations with our predictive models that adapt to your clients’ unique rhythms.</div>
+      </div>
+      <!-- Concierge Wellness Feature -->
+      <div class="feature-card">
+        <div class="feature-icon">👑</div>
+        <div class="feature-title">Concierge Wellness</div>
+        <div class="feature-desc">Elevate the coaching experience with personalised nutrition, recovery and stress‑management plans tailored for high‑performers.</div>
+      </div>
+      <!-- Elite Experience Feature -->
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <div class="feature-title">Elite Experience</div>
+        <div class="feature-desc">Deliver a luxury experience with premium design, private client portals and white‑glove support for elite clientele.</div>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 INCH. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
