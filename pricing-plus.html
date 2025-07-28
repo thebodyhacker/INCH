@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INCH – Pricing & ROI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0E0E0E;
+      color: #FFFFFF;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    .logo span {
+      color: #B6FF00;
+      margin-right: 8px;
+      font-size: 32px;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #B6FF00;
+    }
+    .cta-button {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #9BDB00;
+    }
+    .hero {
+      text-align: center;
+      margin: 40px 0 60px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #A0A0A0;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .plan-card {
+      background: #171717;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(182, 255, 0, 0.05);
+    }
+    .plan-card.popular::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    .plan-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .plan-price {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .plan-duration {
+      font-size: 16px;
+      color: #A0A0A0;
+      margin-bottom: 20px;
+    }
+    .plan-features {
+      text-align: left;
+      margin: 0 auto 20px;
+      max-width: 220px;
+      color: #A0A0A0;
+    }
+    .plan-features li {
+      margin-bottom: 8px;
+      list-style: none;
+      position: relative;
+      padding-left: 20px;
+    }
+    .plan-features li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #B6FF00;
+    }
+    .plan-button {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .plan-button:hover {
+      background-color: #9BDB00;
+    }
+    /* ROI section */
+    .roi-section {
+      margin-top: 80px;
+      text-align: center;
+    }
+    .roi-section h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #B6FF00;
+    }
+    .roi-section p {
+      font-size: 18px;
+      color: #A0A0A0;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .roi-card {
+      background: #171717;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(182, 255, 0, 0.05);
+    }
+    .roi-icon {
+      font-size: 40px;
+      color: #B6FF00;
+      margin-bottom: 12px;
+    }
+    .roi-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .roi-desc {
+      font-size: 16px;
+      color: #C8C8C8;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid #2A2A2A;
+      text-align: center;
+      color: #6B6B6B;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span>|</span>INCH</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="features-new.html">Features</a>
+        <a href="pricing-plus.html" class="active">Pricing</a>
+        <a href="success.html">Success</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="resources.html">Resources</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a href="demo.html" class="cta-button">Free Trial</a>
+    </header>
+    <div class="hero">
+      <h1>Pricing & Return on Investment</h1>
+      <p>Choose the plan that fits your ambitions. See how even small improvements in sleep, stress and nutrition can pay off big time.</p>
+    </div>
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-title">Elite Starter</div>
+        <div class="plan-price">$49</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Unified health dashboard</li>
+          <li>Basic AI insights</li>
+          <li>Up to 5 clients</li>
+        </ul>
+        <a href="demo.html" class="plan-button">Get Started</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="plan-title">Professional</div>
+        <div class="plan-price">$99</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Advanced AI coaching</li>
+          <li>Calendar & nutrition integration</li>
+          <li>Up to 20 clients</li>
+        </ul>
+        <a href="demo.html" class="plan-button">Get Started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-title">Premier</div>
+        <div class="plan-price">$199</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Mental‑health analytics</li>
+          <li>API access & custom reports</li>
+          <li>Up to 50 clients</li>
+        </ul>
+        <a href="demo.html" class="plan-button">Get Started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-title">Executive Concierge</div>
+        <div class="plan-price">$399</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Unlimited clients</li>
+          <li>Concierge health advisory</li>
+          <li>Custom analytics & white‑labeling</li>
+        </ul>
+        <a href="demo.html" class="plan-button">Get Started</a>
+      </div>
+    </div>
+    <div class="roi-section">
+      <h2>Why It Pays Off</h2>
+      <p>High‑performers who track and optimise their sleep, stress and nutrition see major gains. Even a one‑hour improvement in sleep can boost productivity by 10–20% and reduce cravings that sabotage diet goals【414074776054375†L59-L90】.</p>
+      <div class="roi-grid">
+        <div class="roi-card">
+          <div class="roi-icon">💼</div>
+          <div class="roi-title">Productivity Boost</div>
+          <div class="roi-desc">Better sleep means clearer decision‑making and higher output. A 15% productivity increase easily covers the cost of your plan.</div>
+        </div>
+        <div class="roi-card">
+          <div class="roi-icon">💪</div>
+          <div class="roi-title">Health Savings</div>
+          <div class="roi-desc">Reduced stress and improved recovery cut down on sick days and burnout—saving companies thousands per leader per year.</div>
+        </div>
+        <div class="roi-card">
+          <div class="roi-icon">📈</div>
+          <div class="roi-title">Sustained Growth</div>
+          <div class="roi-desc">Investing in wellbeing builds a foundation for long‑term success, supporting continuous improvement and resilience.</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      © 2025 INCH. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
