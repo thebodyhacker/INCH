@@ -246,6 +246,14 @@ function renderPTDashboard(pt) {
   const avgSleep = (totalSleep / count).toFixed(1);
   const avgCal = Math.round(totalCalories / count);
   const avgStress = (totalStress / count).toFixed(1);
+  // Create container to wrap metrics and clients sections for improved styling
+  const mainContainer = document.createElement('div');
+  mainContainer.className = 'dashboard-container';
+  // Section title for summary metrics
+  const metricsTitle = document.createElement('h2');
+  metricsTitle.className = 'section-title';
+  metricsTitle.textContent = 'Summary';
+  mainContainer.appendChild(metricsTitle);
   // Summary metrics grid
   const metricsGrid = document.createElement('div');
   metricsGrid.className = 'metrics-grid';
@@ -272,7 +280,12 @@ function renderPTDashboard(pt) {
     card.appendChild(label);
     metricsGrid.appendChild(card);
   });
-  app.appendChild(metricsGrid);
+  mainContainer.appendChild(metricsGrid);
+  // Clients section title
+  const clientsTitle = document.createElement('h2');
+  clientsTitle.className = 'section-title';
+  clientsTitle.textContent = 'Clients';
+  mainContainer.appendChild(clientsTitle);
   // Clients grid
   const clientsGrid = document.createElement('div');
   clientsGrid.className = 'clients-grid';
@@ -304,13 +317,24 @@ function renderPTDashboard(pt) {
     const avgStressC = (
       client.metrics.stress.reduce((a, b) => a + b, 0) / client.metrics.stress.length
     ).toFixed(1);
+    // Compute difference vs baseline for trend arrow
+    const calDiff = avgCalC - client.metrics.baselineCalories;
+    const trendSpan = document.createElement('span');
+    trendSpan.className = calDiff >= 0 ? 'trend-up' : 'trend-down';
+    trendSpan.textContent = calDiff >= 0 ? '▲' : '▼';
+    // Build stats elements
     [
       { icon: '💤', value: avgSleepC },
       { icon: '🍽️', value: avgCalC },
       { icon: '😓', value: avgStressC },
-    ].forEach((item) => {
+    ].forEach((item, index) => {
       const span = document.createElement('span');
+      span.className = 'stat-item';
       span.innerHTML = `${item.icon} ${item.value}`;
+      // Append trend arrow to calories stat
+      if (index === 1) {
+        span.appendChild(trendSpan);
+      }
       stats.appendChild(span);
     });
     card.appendChild(stats);
@@ -323,7 +347,8 @@ function renderPTDashboard(pt) {
       drawSparkline(sparkline, client.metrics.calories, client.metrics.baselineCalories);
     }, 0);
   });
-  app.appendChild(clientsGrid);
+  mainContainer.appendChild(clientsGrid);
+  app.appendChild(mainContainer);
   // Actions
   const actions = document.createElement('div');
   actions.className = 'actions';

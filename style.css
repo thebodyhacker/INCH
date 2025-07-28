@@ -274,3 +274,40 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Dashboard container wraps metrics and clients sections */
+.dashboard-container {
+  background: rgba(28, 28, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  margin-top: 24px;
+}
+
+/* Section titles for dashboard */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #B6FF00;
+  margin: 16px 0 8px;
+}
+
+/* Stat item within client cards */
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* Trend arrow styling */
+.trend-up {
+  color: #B6FF00;
+  margin-left: 4px;
+  font-size: 0.8rem;
+}
+.trend-down {
+  color: #FF6B6B;
+  margin-left: 4px;
+  font-size: 0.8rem;
+}
