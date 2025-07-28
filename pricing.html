@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INCH – Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0E0E0E;
+      color: #FFFFFF;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    .logo span {
+      color: #B6FF00;
+      margin-right: 8px;
+      font-size: 32px;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #B6FF00;
+    }
+    .cta-button {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #9BDB00;
+    }
+    .hero {
+      text-align: center;
+      margin: 40px 0 60px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #A0A0A0;
+    }
+    .pricing-toggle {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .toggle-button {
+      background-color: #171717;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      margin-right: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .toggle-button.active {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .plan-card {
+      background: #171717;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .plan-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(182, 255, 0, 0.15);
+    }
+    .plan-card.popular::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    .plan-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .plan-price {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .plan-duration {
+      font-size: 16px;
+      color: #A0A0A0;
+      margin-bottom: 20px;
+    }
+    .plan-features {
+      text-align: left;
+      margin: 0 auto 20px;
+      max-width: 220px;
+      color: #A0A0A0;
+    }
+    .plan-features li {
+      margin-bottom: 8px;
+      list-style: none;
+      position: relative;
+      padding-left: 20px;
+    }
+    .plan-features li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #B6FF00;
+    }
+    .plan-button {
+      background-color: #B6FF00;
+      color: #0E0E0E;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .plan-button:hover {
+      background-color: #9BDB00;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid #2A2A2A;
+      text-align: center;
+      color: #6B6B6B;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span>|</span>INCH</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="index.html" class="cta-button">Get Started</a>
+    </header>
+
+    <div class="hero">
+      <h1>Pricing</h1>
+      <p>Select the plan that fits your needs. Pay monthly or yearly and save up to 20% with our annual plans.</p>
+    </div>
+
+    <div class="pricing-toggle">
+      <span class="toggle-button active">Monthly</span>
+      <span class="toggle-button">Yearly</span>
+    </div>
+
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$19</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Single user</li>
+          <li>10GB storage</li>
+          <li>Email support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <a href="index.html" class="plan-button">Get Started</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$49</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Up to 5 users</li>
+          <li>50GB storage</li>
+          <li>Priority support</li>
+          <li>Advanced analytics</li>
+        </ul>
+        <a href="index.html" class="plan-button">Get Started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$99</div>
+        <div class="plan-duration">/month</div>
+        <ul class="plan-features">
+          <li>Unlimited users</li>
+          <li>200GB storage</li>
+          <li>24/7 support</li>
+          <li>All features</li>
+        </ul>
+        <a href="index.html" class="plan-button">Get Started</a>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 INCH. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
