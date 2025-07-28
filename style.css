@@ -1,0 +1,276 @@
+/*
+  Global styles for INCH app
+
+  The design uses a dark foundation (charcoal) with a bright electric lime accent.
+  The app layout is kept minimal with generous padding and rounded corners. The accent
+  color is used for calls‑to‑action (buttons, highlights) and important metrics.
+
+  Fonts default to the system sans‑serif stack to ensure readability across devices.
+*/
+/*
+  Global styles for INCH app – redesigned with a modern, polished UI.
+  The dark charcoal foundation acts as a canvas for vibrant electric‑lime accents.
+  We embrace generous padding, soft rounded corners and subtle shadows to
+  create a luxurious yet functional experience suitable for elite clients.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  /* Villain‑inspired radial gradient for depth */
+  background: radial-gradient(circle at top left, #0e0e0e, #0a0a0a 70%, #000000);
+  color: #E0E0E0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Root app container */
+#app {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+
+/* Header bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #252525;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #B6FF00;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header .subtitle {
+  font-size: 0.9rem;
+  color: #777777;
+  margin-left: 8px;
+}
+.header .user {
+  font-size: 0.9rem;
+  color: #B6FF00;
+}
+
+/* Auth card for login */
+.auth-card {
+  max-width: 420px;
+  margin: 80px auto;
+  background: rgba(38, 38, 38, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+.auth-card h1 {
+  font-size: 2rem;
+  color: #B6FF00;
+  margin-bottom: 8px;
+}
+.auth-card p.tagline {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-bottom: 24px;
+}
+.auth-card .input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+.auth-card label {
+  font-size: 0.85rem;
+  color: #A0A0A0;
+  margin-bottom: 4px;
+}
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  background-color: #333333;
+  border: 1px solid #444444;
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+.auth-card .btn {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Primary button */
+.btn {
+  background-color: #B6FF00;
+  color: #1A1A1A;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 0 8px rgba(182, 255, 0, 0.3);
+}
+.btn:hover {
+  background-color: #A0E600;
+  box-shadow: 0 0 16px rgba(182, 255, 0, 0.6);
+}
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 6px rgba(182, 255, 0, 0.4);
+}
+
+/* Metric summary cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.metric-card {
+  background: linear-gradient(145deg, #222222, #2c2c2c);
+  border: 1px solid #2f2f2f;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.metric-card .icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.metric-card .label {
+  font-size: 0.8rem;
+  color: #AAAAAA;
+}
+.metric-card .value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* Client cards list */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.client-card {
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border: 1px solid #2f2f2f;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.25s ease;
+}
+.client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.8), 0 0 12px rgba(182, 255, 0, 0.2);
+}
+.client-card .name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #B6FF00;
+  margin-bottom: 8px;
+}
+.client-card .stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #CCCCCC;
+  margin-top: 6px;
+}
+.client-card .stats span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.client-card .sparkline {
+  margin-top: 12px;
+  height: 60px;
+  background: #1e1e1e;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Detail page layout */
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.detail-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.suggestions-list li {
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(145deg, #222222, #2c2c2c);
+  border: 1px solid #323232;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+.suggestions-list li .emoji {
+  font-size: 1.4rem;
+  margin-right: 12px;
+}
+
+/* Logout link / actions */
+.actions {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.actions .link {
+  color: #6B6B6B;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    margin: 40px 12px;
+    padding: 24px;
+  }
+  .header .logo {
+    font-size: 1.4rem;
+  }
+  .metric-card .value {
+    font-size: 1.2rem;
+  }
+  .client-card .name {
+    font-size: 1rem;
+  }
+}
