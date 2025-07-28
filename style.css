@@ -311,3 +311,53 @@ body {
   margin-left: 4px;
   font-size: 0.8rem;
 }
+
+/* Client dashboard layout */
+.client-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+}
+.client-hero .avatar {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.client-hero .avatar img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 16px rgba(182, 255, 0, 0.4);
+}
+.client-hero .client-stats {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.client-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #B6FF00;
+  margin-bottom: 24px;
+}
+.client-metrics {
+  margin-top: 0;
+}
+.client-metrics .metric-card {
+  text-align: left;
+  padding: 20px;
+}
+.client-metrics .metric-card .icon {
+  font-size: 1.4rem;
+}
+.client-metrics .metric-card .value {
+  font-size: 1.6rem;
+  margin: 4px 0;
+}
+.client-metrics .metric-card .label {
+  font-size: 0.8rem;
+  color: #AAAAAA;
+}
